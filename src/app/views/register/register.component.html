@@ -1,0 +1,146 @@
+<html>
+<head>
+<style>
+
+
+  body {
+    background: #f2f2f2;
+    height: 1000px;
+  }
+
+  .wrapper {
+
+    position: center;
+    margin-left: 42%;
+    padding-top: 15%;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul li {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background: #f15f22;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  ul li .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #fff;
+  }
+  ul li .fas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #fff;
+  }
+
+
+
+  ul li.twitter{
+    background: #f15f22;
+  }
+
+  ul li.instagram{
+    background: #f15f22;
+  }
+
+
+
+  ul li.twitter div.slider{
+    background: #f15f22;
+  }
+
+  ul li.instagram div.slider{
+    background: #f15f22;
+  }
+
+
+
+  .slider {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 51px;
+    width: 0px;
+    height: 50px;
+    background: #f15f22;
+    border-radius: 3px;
+    transition: all 0.5s 0.3s ease;
+  }
+
+  .slider p {
+    font-family: arial;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+
+  ul li:hover .slider {
+    width: 180px;
+    transition: all 0.5s ease;
+  }
+
+  ul li:hover .slider p {
+    opacity: 1;
+    transition: all 1s 0.2s ease;
+  }
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="wrapper">
+  <ul>
+If you're a client, Click here:
+    <li class="client">
+      <a href="/regclient"> <i class="fa fa-user" aria-hidden="true"></i></a>
+      <div class="slider">
+        <p>User</p>
+      </div>
+    </li>
+If you're a delivery_man, Click here:
+    <li class="delivery_man">
+     <a href="/regdelivery"><i class="fa fa-car" aria-hidden="true"></i></a>
+      <div class="slider">
+        <p>delivery man</p>
+      </div>
+    </li>
+
+
+  </ul>
+</div>
+
+
+
+</body>
+</html>
+

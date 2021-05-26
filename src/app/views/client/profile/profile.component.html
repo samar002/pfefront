@@ -1,0 +1,189 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+  <!--  All snippets are MIT license http://bootdey.com/license -->
+  <title>account setting or edit profile - Bootdey.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding-top: 40px;
+      color: #2e323c;
+      background: #f5f6fa;
+      position: relative;
+      height: 100%;
+    }
+    .account-settings .user-profile {
+      margin: 0 0 1rem 0;
+      padding-bottom: 1rem;
+      text-align: center;
+    }
+    .account-settings .user-profile .user-avatar {
+      margin: 0 0 1rem 0;
+    }
+    .account-settings .user-profile .user-avatar img {
+      width: 90px;
+      height: 90px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
+    }
+    .account-settings .user-profile h5.user-name {
+      margin: 0 0 0.5rem 0;
+    }
+    .account-settings .user-profile h6.user-email {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #9fa8b9;
+    }
+    .account-settings .about {
+      margin: 2rem 0 0 0;
+      text-align: center;
+    }
+    .account-settings .about h5 {
+      margin: 0 0 15px 0;
+      color: #007ae1;
+    }
+    .account-settings .about p {
+      font-size: 0.825rem;
+    }
+    .form-control {
+      border: 1px solid #cfd1d8;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      font-size: .825rem;
+      background: #ffffff;
+      color: #2e323c;
+    }
+
+    .card {
+      background: #ffffff;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border: 0;
+      margin-bottom: 1rem;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row gutters">
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="account-settings">
+            <div class="user-profile">
+              <div class="user-avatar">
+                <img src="{{photoProfil}}">
+              </div>
+              <h5 class="user-name">{{nom}} {{prenom}}</h5>
+              <h6 class="user-email">{{email}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+      <div class="card h-100">
+        <div class="card-body">
+          <form [formGroup]="profileForm">
+          <div class="row gutters">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" formControlName="lName" id="nom" placeholder="nom">
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="prenom">Prenom</label>
+                <input type="text" class="form-control" id="prenom" formControlName="fName"placeholder="prenom">
+              </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="ddn">Date de naissance</label>
+                <input type="date" class="form-control" id="ddn" formControlName="ddn" placeholder="date de naissance ">
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="adr">Adresse</label>
+                <input type="text" class="form-control" id="adr" formControlName="adr"placeholder=" adresse ">
+              </div>
+            </div>
+          </div>
+          <div class="row gutters">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="cp">Code Postal</label>
+                <input type="text" class="form-control" id="cp" formControlName="cp" placeholder=" code postal">
+              </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="ndt">Numero de telephone  </label>
+                <input type="text" class="form-control" id="ndt" formControlName="nbr" placeholder="votre numero">
+              </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Changer votre email">
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="mdp">Nouveau Mot de passe</label>
+                <input type="password" class="form-control" id="mdp" formControlName="mdp" placeholder="mot de passe">
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="cmdp">Confirmer Mot de passe</label>
+                <input type="password" class="form-control" id="cmdp" formControlName="cmdp" placeholder="confirmer mot de passe">
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label for="image">image</label>
+                <input type="file" class="form-control" id="image"  placeholder="upload" (change)="recuperPhoto($event)">
+              </div>
+            </div>
+          </div></form>
+          <div class="row gutters">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="text-right">
+                <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
+                <button type="button" id="submit1" name="submit" (click)="UpdateNow()" class="btn btn-primary">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
